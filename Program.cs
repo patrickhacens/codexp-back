@@ -6,15 +6,21 @@ namespace ConsoleCadastro
     {
         static void Main(string[] args)
         {
-            FazerCafe("caramelo");
-            FazerCafe("chocolate");
+            Console.WriteLine("Qual capsula você quer?");
+
+            string capsula = Console.ReadLine();
+
+            string xicara = FazerCafe(capsula);
+
+            Console.WriteLine("tomei: " + xicara);
         }
 
-        static void FazerCafe(string capsula)
+        static string FazerCafe(string capsula)
         {
-            System.Console.WriteLine("Esquentar agua");
-            System.Console.WriteLine("Colocar pó de magia(café)");
-            System.Console.WriteLine("Colocar " + capsula);
+            Console.WriteLine("Esquentar agua");
+            Console.WriteLine("Colocar pó de magia(café)");
+            Console.WriteLine("Colocar " + capsula);
+            return "cafe de " + capsula;
         }
     }
 }
